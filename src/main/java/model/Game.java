@@ -86,5 +86,21 @@ public class Game implements Comparator<Game>, Serializable {
 		this.chart = chart;
 	}
 
+	public String getResume() {
+		return resume;
+	}
+
+	public void setResume(String resume) {
+		this.resume = resume;
+	}
+
+	public float getNote() {
+		return note;
+	}
+
+	public void setNote(float note) {
+		this.note = note;
+	}
+
 
 }
