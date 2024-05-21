@@ -2,6 +2,8 @@ package model;
 
 import java.io.Serializable;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class Game implements Comparator<Game>, Serializable {
@@ -14,9 +16,9 @@ public class Game implements Comparator<Game>, Serializable {
 	private String chart;
 	private String resume;
 	private float note;
+	private List<String> tags;
 
-
-	public Game(String name, String imageURL, String description, String genre, String releaseDate, String chart, String resume, float note) {
+	public Game(String name, String imageURL, String description, String genre, String releaseDate, String chart, String resume, float note, List<String> tags) {
 		super();
 		this.name = name;
 		this.imageURL = imageURL;
@@ -26,6 +28,7 @@ public class Game implements Comparator<Game>, Serializable {
 		this.chart = chart;
 		this.resume = resume;
 		this.note = note;
+		this.tags = tags;
 	}
 	
 	public String getName() {
@@ -102,5 +105,16 @@ public class Game implements Comparator<Game>, Serializable {
 		this.note = note;
 	}
 
+	public void addTag(String tag) {
+		tags.add(tag);
+	}
+
+	public void removeTag(String tag) {
+		tags.remove(tag);
+	}
+
+	public List<String> getTags() {
+		return tags;
+	}
 
 }
