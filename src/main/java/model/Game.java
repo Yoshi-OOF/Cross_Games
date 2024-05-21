@@ -13,10 +13,14 @@ public class Game implements Comparator<Game>, Serializable {
 	private String releaseDate;
 	private String chart;
 
-
-	public Game() {
+	public Game(String name, String imageURL, String description, String genre, String releaseDate, String chart) {
 		super();
-		this.name = "";
+		this.name = name;
+		this.imageURL = imageURL;
+		this.description = description;
+		this.genre = genre;
+		this.releaseDate = releaseDate;
+		this.chart = chart;
 	}
 	
 	public String getName() {
