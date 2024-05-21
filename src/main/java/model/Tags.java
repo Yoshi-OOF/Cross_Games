@@ -2,12 +2,12 @@ package model;
 
 import java.util.List;
 
-public class MyTags {
+public class Tags {
 
         private String name;
         private List<Game> games;
 
-        public MyTags() {
+        public Tags() {
             super();
             this.name = "";
         }
