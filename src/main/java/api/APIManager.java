@@ -9,10 +9,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import model.Game;
 import pojo.Result;
 import pojo.ResultGame;
@@ -46,9 +42,11 @@ public class APIManager {
 			return;
 		}
 
+		System.out.println(response.body());
+
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-		
+
 		ResultGame result;
 		try {
 			result = objectMapper.readValue(response.body(), ResultGame.class);
@@ -57,13 +55,14 @@ public class APIManager {
 			}
 			Result firstResult = result.getResults()[0];
 			System.out.println(firstResult.getBackgroundImage());
-			
+
 			newGame.setName(firstResult.getName());
 			newGame.setImageURL(firstResult.getBackgroundImage());
-			
+
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
 	}
+
 
 }
