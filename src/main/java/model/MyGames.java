@@ -75,7 +75,12 @@ public class MyGames implements Serializable {
 	}
 
 	public void afficherJeux() {
-		allGames.forEach(game -> {
+		afficherJeux(allGames);
+	}
+
+	// Méthode pour afficher une liste de jeux
+	public void afficherJeux(List<Game> games) {
+		games.forEach(game -> {
 			System.out.println("Name: " + game.getName());
 			System.out.println("Image URL: " + game.getImageURL());
 			System.out.println("Description: " + game.getDescription());

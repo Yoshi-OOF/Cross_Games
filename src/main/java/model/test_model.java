@@ -6,6 +6,7 @@ import java.util.List;
 public class test_model {
 
     public static void main(String[] args) {
+        MyGames SortedGames = new MyGames();
         Game game1 = new Game("Warframe", "url1", "desc1", "genre1", "2020-01-01", "chart1", "resume1", 8.5f, Arrays.asList("tag1", "tag2"));
         Game game2 = new Game("Call of Duty", "url2", "desc2", "genre2", "2019-01-01", "chart2", "resume2", 9.0f, Arrays.asList("tag2", "tag3"));
         Game game3 = new Game("Assassin's Creed", "url3", "desc3", "genre3", "2021-01-01", "chart3", "resume3", 7.5f, Arrays.asList("tag1", "tag3"));
@@ -29,8 +30,7 @@ public class test_model {
         myGames.addGame(game9);
         myGames.addGame(game10);
 
-        List<String> selectedTags = Arrays.asList("tag1");
-        myGames.sortByNote();
-        myGames.affichageParTag(selectedTags);
+        List<Game> sortedByNote = myGames.sortByNote();
+        myGames.afficherJeux(sortedByNote);
     }
 }
