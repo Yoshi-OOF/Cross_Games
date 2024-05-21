@@ -13,9 +13,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import application.model.Game;
-import application.pojo.Result;
-import application.pojo.ResultGame;
+import model.Game;
+import pojo.Result;
+import pojo.ResultGame;
 
 
 public class APIManager {
@@ -32,7 +32,7 @@ public class APIManager {
 		HttpRequest request = HttpRequest.newBuilder()
 				//  https://rawg-video-games-database.p.rapidapi.com/games
 				.uri(URI.create("https://api.rawg.io/api/games"
-						+ "?key=c480f46bdb0847df949871a53b335825"
+						+ "?key=bed0e2440362497d86cfd2b400a1fd31"
 						+ "&search=" + searchedEncoded
 						+ "&search_exact=1"
 						+ "&page_size=1"))
