@@ -73,4 +73,19 @@ public class MyGames implements Serializable {
 			System.out.println("---------------------------------------------------");
 		});
 	}
+
+	public void afficherJeux() {
+		allGames.forEach(game -> {
+			System.out.println("Name: " + game.getName());
+			System.out.println("Image URL: " + game.getImageURL());
+			System.out.println("Description: " + game.getDescription());
+			System.out.println("Genre: " + game.getGenre());
+			System.out.println("Release Date: " + game.getReleaseDate());
+			System.out.println("Chart: " + game.getChart());
+			System.out.println("Resume: " + game.getResume());
+			System.out.println("Note: " + game.getNote());
+			System.out.println("Tags: " + game.getTags());
+			System.out.println("---------------------------------------------------");
+		});
+	}
 }
