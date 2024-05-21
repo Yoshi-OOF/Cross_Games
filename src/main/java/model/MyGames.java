@@ -26,5 +26,4 @@ public class MyGames implements Serializable {
 		allGames.remove(game);
 	}
 	
-	
 }

@@ -12,8 +12,11 @@ public class Game implements Comparator<Game>, Serializable {
 	private String genre;
 	private String releaseDate;
 	private String chart;
+	private String resume;
+	private float note;
 
-	public Game(String name, String imageURL, String description, String genre, String releaseDate, String chart) {
+
+	public Game(String name, String imageURL, String description, String genre, String releaseDate, String chart, String resume, float note) {
 		super();
 		this.name = name;
 		this.imageURL = imageURL;
@@ -21,6 +24,8 @@ public class Game implements Comparator<Game>, Serializable {
 		this.genre = genre;
 		this.releaseDate = releaseDate;
 		this.chart = chart;
+		this.resume = resume;
+		this.note = note;
 	}
 	
 	public String getName() {
