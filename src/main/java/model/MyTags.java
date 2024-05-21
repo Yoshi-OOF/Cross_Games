@@ -24,4 +24,17 @@ public class MyTags {
         public String toString() {
             return name;
         }
+
+        public List<Game> getGames() {
+            return games;
+        }
+
+        public void addGame(Game game) {
+            games.add(game);
+        }
+
+        public void removeGame(Game game) {
+            games.remove(game);
+        }
+
 }
