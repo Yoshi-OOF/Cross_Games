@@ -31,6 +31,6 @@ public class test_model {
         myGames.addGame(game10);
 
         List<Game> sortedByNote = myGames.sortByNote();
-        myGames.afficherJeux(sortedByNote);
+        myGames.afficherJeux();
     }
 }
