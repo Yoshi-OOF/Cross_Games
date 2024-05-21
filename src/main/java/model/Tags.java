@@ -7,9 +7,9 @@ public class Tags {
         private String name;
         private List<Game> games;
 
-        public Tags() {
+        public Tags(String name) {
             super();
-            this.name = "";
+            this.name = name;
         }
 
         public String getName() {
