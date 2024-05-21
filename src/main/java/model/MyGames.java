@@ -61,16 +61,7 @@ public class MyGames implements Serializable {
 	public void affichageParTag(List<String> selectedTags) {
 		List<Game> filteredGames = filterByTags(selectedTags);
 		filteredGames.forEach(game -> {
-			System.out.println("Name: " + game.getName());
-			System.out.println("Image URL: " + game.getImageURL());
-			System.out.println("Description: " + game.getDescription());
-			System.out.println("Genre: " + game.getGenre());
-			System.out.println("Release Date: " + game.getReleaseDate());
-			System.out.println("Chart: " + game.getChart());
-			System.out.println("Resume: " + game.getResume());
-			System.out.println("Note: " + game.getNote());
-			System.out.println("Tags: " + game.getTags());
-			System.out.println("---------------------------------------------------");
+			System.out.println(game);
 		});
 	}
 
@@ -80,16 +71,7 @@ public class MyGames implements Serializable {
 
 	public void afficherJeux(List<Game> games) {
 		games.forEach(game -> {
-			System.out.println("Name: " + game.getName());
-			System.out.println("Image URL: " + game.getImageURL());
-			System.out.println("Description: " + game.getDescription());
-			System.out.println("Genre: " + game.getGenre());
-			System.out.println("Release Date: " + game.getReleaseDate());
-			System.out.println("Chart: " + game.getChart());
-			System.out.println("Resume: " + game.getResume());
-			System.out.println("Note: " + game.getNote());
-			System.out.println("Tags: " + game.getTags());
-			System.out.println("---------------------------------------------------");
+			System.out.println(game);
 		});
 	}
 }

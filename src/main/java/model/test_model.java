@@ -42,7 +42,7 @@ public class test_model {
         List<Game> SortedGames = myGames.sortByNote();
         System.out.println("Sorted by Note:");
         for (Game game : SortedGames) {
-            System.out.println(game.getName() + " - " + game.getNote());
+            System.out.println(game);
         }
     }
 }
