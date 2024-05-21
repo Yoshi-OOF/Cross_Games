@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tags {
@@ -10,6 +11,7 @@ public class Tags {
         public Tags(String name) {
             super();
             this.name = name;
+            games = new ArrayList<>();
         }
 
         public String getName() {

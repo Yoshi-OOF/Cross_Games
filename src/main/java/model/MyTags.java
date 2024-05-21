@@ -9,7 +9,6 @@ import java.util.Optional;
 @SuppressWarnings("serial")
 public class MyTags implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     private List<Tags> allTags;
 
     public MyTags() {
@@ -18,9 +17,6 @@ public class MyTags implements Serializable {
     }
 
     public synchronized void addTag(Tags newTag) {
-        if (newTag == null) {
-            throw new IllegalArgumentException("Cannot add null tag");
-        }
         allTags.add(newTag);
     }
 
@@ -29,9 +25,6 @@ public class MyTags implements Serializable {
     }
 
     public synchronized void removeTag(Tags tag) {
-        if (tag == null) {
-            throw new IllegalArgumentException("Cannot remove null tag");
-        }
         allTags.remove(tag);
     }
 
