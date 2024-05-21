@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tags {
@@ -7,9 +8,10 @@ public class Tags {
         private String name;
         private List<Game> games;
 
-        public Tags() {
+        public Tags(String name) {
             super();
-            this.name = "";
+            this.name = name;
+            games = new ArrayList<>();
         }
 
         public String getName() {
