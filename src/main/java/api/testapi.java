@@ -23,7 +23,7 @@ public class testapi {
                 throw new GameNotFoundException();
             }
             Result firstResult = result.getResults()[0];
-            System.out.println(firstResult);
+            System.out.println(firstResult.getName());
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();

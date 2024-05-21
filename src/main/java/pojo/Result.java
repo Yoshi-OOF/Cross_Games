@@ -9,7 +9,10 @@ public class Result {
     private String name;
     @JsonProperty("background_image")
     private String backgroundImage;
+    @JsonProperty("released")
+    private String released;
 
+    public String getReleased() { return released; }
     public String getName() { return name; }
     public String getBackgroundImage() { return backgroundImage; }
     
