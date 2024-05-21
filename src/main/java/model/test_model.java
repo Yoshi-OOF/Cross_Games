@@ -19,6 +19,11 @@ public class test_model {
 
         // Affichage des jeux filtrés par tags
         List<String> selectedTags = Arrays.asList("tag1");
-        Action.affichageParTag(myGames, selectedTags);
+        myGames.affichageParTag(selectedTags);
+
+        myGames.sortByNote();
+        myGames.affichageParTag(selectedTags);
+
+    
     }
 }
