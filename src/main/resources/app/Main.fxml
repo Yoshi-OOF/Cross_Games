@@ -1,24 +1,892 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #d0d0d0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="63.0" layoutY="44.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="96.0" text="Button" />
-      <TextField layoutX="874.0" layoutY="60.0" />
-      <Button layoutX="1641.0" layoutY="44.0" mnemonicParsing="false" text="Button" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="85.0" layoutY="139.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="85.0" layoutY="236.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="85.0" layoutY="274.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="85.0" layoutY="312.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="85.0" layoutY="409.0" mnemonicParsing="false" text="Button" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="363.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="672.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="376.0" layoutY="333.0" text="Label" />
+      <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <HBox prefHeight="98.0" prefWidth="1920.0">
+               <children>
+                  <GridPane gridLinesVisible="true" prefHeight="98.0" prefWidth="1922.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.4000244140625" minWidth="10.0" prefWidth="156.80001220703124" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1782.4000549316406" minWidth="10.0" prefWidth="1763.9999877929688" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Pane prefHeight="98.0" prefWidth="238.0">
+                                 <children>
+                                    <Text layoutX="5.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CROSS GAMES" textAlignment="CENTER" wrappingWidth="230.08056640625">
+                                       <font>
+                                          <Font name="Gadugi Bold" size="32.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="98.0" prefWidth="97.0">
+                                 <children>
+                                    <ImageView fitHeight="97.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/logo.png" />
+                                       </image></ImageView>
+                                 </children></Pane>
+                              <Pane prefHeight="98.0" prefWidth="101.0">
+                                 <children>
+                                    <ImageView fitHeight="99.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/loupe.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <TextField onAction="#searchGameTextField" prefHeight="89.0" prefWidth="1081.0" promptText="Recherche..." style="-fx-border-radius: 1000; -fx-border-color: black; -fx-border-width: 5; -fx-background-color: none;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Gadugi" size="35.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets></TextField>
+                              <Pane prefHeight="98.0" prefWidth="128.0" />
+                              <Pane prefHeight="98.0" prefWidth="117.0">
+                                 <children>
+                                    <ImageView fx:id="settingsButton" fitHeight="88.0" fitWidth="97.0" layoutX="2.0" layoutY="6.0" onMouseClicked="#settingsClicked" onMouseEntered="#hoverSettingsButton" onMouseExited="#noHoverSettingsButton" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/gear.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="addAGameButton" alignment="CENTER" onMouseClicked="#addAGameClicked" onMouseEntered="#hoverAddAGameButton" onMouseExited="#noHoverAddAGameButton" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="67.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/add.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un jeu" wrappingWidth="88.00048828125">
+                                 <font>
+                                    <Font name="Gadugi" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="982.0" prefWidth="1920.0">
+               <children>
+                  <VBox prefHeight="982.0" prefWidth="157.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" prefHeight="997.0" prefWidth="158.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox fx:id="homeButton" alignment="CENTER" onMouseClicked="#homeClicked" onMouseEntered="#hoverHomeButton" onMouseExited="#noHoverHomeButton" prefHeight="123.0" prefWidth="201.0">
+                                 <children>
+                                    <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/home.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Accueil">
+                                       <font>
+                                          <Font name="Gadugi" size="27.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="doneButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#doneClicked" onMouseEntered="#hoverDoneButton" onMouseExited="#noHoverDoneButton" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/check.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fait">
+                                       <font>
+                                          <Font name="Gadugi" size="27.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="toDoButton" alignment="CENTER" layoutX="10.0" layoutY="256.0" onMouseClicked="#toDoClicked" onMouseEntered="#hoverToDoButton" onMouseExited="#noHoverToDoButton" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/todo.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="À faire">
+                                       <font>
+                                          <Font name="Gadugi" size="27.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="wishlistButton" alignment="CENTER" layoutX="10.0" layoutY="379.0" onMouseClicked="#wishlistClicked" onMouseEntered="#hoverWishlistButton" onMouseExited="#noHoverWishlistButton" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/heart.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wishlist">
+                                       <font>
+                                          <Font name="Gadugi" size="27.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="discoverButton" alignment="CENTER" layoutX="10.0" layoutY="502.0" onMouseClicked="#discoverClicked" onMouseEntered="#hoverDiscoverButton" onMouseExited="#noHoverDiscoverButton" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/cake.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Découvrir">
+                                       <font>
+                                          <Font name="Gadugi" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="982.0" prefWidth="1762.0">
+                     <children>
+                        <HBox prefHeight="304.0" prefWidth="1762.0">
+                           <children>
+                              <Pane fx:id="paneGame1" onMouseClicked="#paneGame1Clicked" onMouseEntered="#hoverPaneGame1" onMouseExited="#noHoverPaneGame1" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame2" layoutX="90.0" layoutY="40.0" onMouseClicked="#paneGame2Clicked" onMouseEntered="#hoverPaneGame2" onMouseExited="#noHoverPaneGame2" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame3" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGame3Clicked" onMouseEntered="#hoverPaneGame3" onMouseExited="#noHoverPaneGame3" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame4" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGame4Clicked" onMouseEntered="#hoverPaneGame4" onMouseExited="#noHoverPaneGame4" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame5" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGame5Clicked" onMouseEntered="#hoverPaneGame5" onMouseExited="#noHoverPaneGame5" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame6" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGame6Clicked" onMouseEntered="#hoverPaneGame6" onMouseExited="#noHoverPaneGame6" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="10.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="304.0" prefWidth="1762.0">
+                           <children>
+                              <Pane fx:id="paneGame7" onMouseClicked="#paneGame7Clicked" onMouseEntered="#hoverPaneGame7" onMouseExited="#noHoverPaneGame7" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame8" layoutX="90.0" layoutY="40.0" onMouseClicked="#paneGame8Clicked" onMouseEntered="#hoverPaneGame8" onMouseExited="#noHoverPaneGame8" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame9" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGame9Clicked" onMouseEntered="#hoverPaneGame9" onMouseExited="#noHoverPaneGame9" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame10" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGame10Clicked" onMouseEntered="#hoverPaneGame10" onMouseExited="#noHoverPaneGame10" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame11" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGame11Clicked" onMouseEntered="#hoverPaneGame11" onMouseExited="#noHoverPaneGame11" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame12" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGame12Clicked" onMouseEntered="#hoverPaneGame12" onMouseExited="#noHoverPaneGame12" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2111111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3111111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="-5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="304.0" prefHeight="304.0" prefWidth="1762.0">
+                           <children>
+                              <Pane fx:id="paneGame13" onMouseClicked="#paneGame13Clicked" onMouseEntered="#hoverPaneGame13" onMouseExited="#noHoverPaneGame13" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame14" layoutX="90.0" layoutY="40.0" onMouseClicked="#paneGame14Clicked" onMouseEntered="#hoverPaneGame14" onMouseExited="#noHoverPaneGame14" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame15" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGame15Clicked" onMouseEntered="#hoverPaneGame15" onMouseExited="#noHoverPaneGame15" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame16" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGame16Clicked" onMouseEntered="#hoverPaneGame16" onMouseExited="#noHoverPaneGame16" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag211111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag311111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame17" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGame17Clicked" onMouseEntered="#hoverPaneGame17" onMouseExited="#noHoverPaneGame17" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame1111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag1111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag2111111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag3111111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane fx:id="paneGame18" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGame18Clicked" onMouseEntered="#hoverPaneGame18" onMouseExited="#noHoverPaneGame18" prefHeight="308.0" prefWidth="200.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
+                                    <ImageView fx:id="imgGame11111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/exempleImageJeu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutY="265.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                                    <HBox alignment="BOTTOM_CENTER" prefHeight="297.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="game1Tag11111111" alignment="CENTER" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="game1Tag21111111" layoutX="10.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="game1Tag31111111" layoutX="47.0" layoutY="10.0" style="-fx-border-color: #0ae500; -fx-border-radius: 10;" text="Tag" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gadugi Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="80.0" top="30.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </Pane>
