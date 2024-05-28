@@ -49,7 +49,15 @@ public class Game implements Comparator<Game>, Serializable {
 
 	@Override
     public String toString() {
-        return name;
+		return "Name: " + this.name + "\n" +
+				"Image URL: " + this.imageURL + "\n" +
+				"Description: " + this.description + "\n" +
+				"Genre: " + this.genre + "\n" +
+				"Release Date: " + this.releaseDate + "\n" +
+				"Chart: " + this.chart + "\n" +
+				"Resume: " + this.resume + "\n" +
+				"Note: " + this.note + "\n" +
+				"Tags: " + this.tags + "\n";
     }
 
 	@Override
