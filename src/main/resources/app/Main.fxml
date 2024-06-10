@@ -224,7 +224,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle1" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -265,7 +265,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle2" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -306,7 +306,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle3" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -347,7 +347,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle4" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -388,7 +388,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle5" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -429,7 +429,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle6" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -477,7 +477,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle7" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -518,7 +518,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle8" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -559,7 +559,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle9" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -600,7 +600,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle10" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -641,7 +641,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle11" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -682,7 +682,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle12" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -730,7 +730,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle13" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -771,7 +771,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle14" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -812,7 +812,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle15" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -853,7 +853,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle16" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -894,7 +894,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle17" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>
@@ -935,7 +935,7 @@
                                        </image>
                                     </ImageView>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="226.0" opacity="0.5" stroke="#0b0c1c" strokeType="INSIDE" width="200.0" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
+                                    <Label fx:id="gameTitle18" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" prefHeight="29.0" prefWidth="200.0" text="Game Title" textFill="WHITE">
                                        <font>
                                           <Font name="Gadugi Bold" size="18.0" />
                                        </font>

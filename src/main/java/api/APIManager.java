@@ -21,6 +21,8 @@ public class APIManager {
 
 	public static String imgUrl;
 
+	public static String gameName;
+
 	public static void setInformations(Game newGame, String searchedText) throws GameNotFoundException {
 		
 		String searchedEncoded = "";
@@ -64,6 +66,7 @@ public class APIManager {
 			System.out.println(firstResult.getBackgroundImage());
 
 			imgUrl = firstResult.getBackgroundImage();
+			gameName= firstResult.getName();
 
 			newGame.setName(firstResult.getName());
 			newGame.setImageURL(firstResult.getBackgroundImage());
