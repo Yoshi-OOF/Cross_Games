@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Game;
 
 import java.io.IOException;
 
@@ -83,10 +84,13 @@ public class MainController {
     public void noHoverPaneGame(){
 
     }
+    
+
 
     public void searchGameButton() throws GameNotFoundException {
+        Game newGame = new Game();
         String searchText = searchGameTextFieldId.getText();
-        //APIManager.setInformations(searchText);
+        APIManager.setInformations(newGame, searchText);
         Image image = new Image(imgUrl);
         imgGame1.setImage(image);
         System.out.println(searchText);

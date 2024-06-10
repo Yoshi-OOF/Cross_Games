@@ -30,6 +30,11 @@ public class Game implements Comparator<Game>, Serializable {
 		this.note = note;
 		this.tags = tags;
 	}
+
+	public Game() {
+		super();
+		this.name = "";
+	}
 	
 	public String getName() {
 		return name;
