@@ -2,12 +2,12 @@ package app;
 
 import api.APIManager;
 import api.GameNotFoundException;
-import api.testapi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -108,27 +108,34 @@ public class MainController {
 
     }
 
-    public void searchGameButton() throws GameNotFoundException {
-        Game newGame = new Game();
-        String searchText = searchGameTextFieldId.getText();
-        APIManager.setInformations(newGame, searchText);
-        Image image = new Image(imgUrl);
+    public void searchGameButton() {
+        try {
+            Game newGame = new Game();
+            String searchText = searchGameTextFieldId.getText();
+            APIManager.setInformations(newGame, searchText);
+            Image image = new Image(APIManager.imgUrl);
 
-        if (currentIndex < imageViews.length) {
-            panesGame[currentIndex].setVisible(true);
-            ImageView currentImageView = imageViews[currentIndex];
-            currentImageView.setImage(image);
-            currentImageView.setPreserveRatio(false);
-            currentImageView.setFitHeight(200);
-            Label currentGameTitle = gameTitles[currentIndex];
-            currentGameTitle.setText(gameName);
-            currentIndex++; // increment the index
-            if (currentIndex >= imageViews.length) {
-                currentIndex = 0; // wrap around to the beginning
+            if (currentIndex < imageViews.length) {
+                panesGame[currentIndex].setVisible(true);
+                ImageView currentImageView = imageViews[currentIndex];
+                currentImageView.setImage(image);
+                currentImageView.setPreserveRatio(false);
+                currentImageView.setFitHeight(200);
+                Label currentGameTitle = gameTitles[currentIndex];
+                currentGameTitle.setText(APIManager.gameName);
+                currentIndex++; // increment the index
+                if (currentIndex >= imageViews.length) {
+                    currentIndex = 0; // wrap around to the beginning
+                }
+            } else {
+                System.out.println("No more image views available");
             }
-        } else {
-            System.out.println("No more image views available");
+            System.out.println(searchText);
+        } catch (GameNotFoundException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Game not found");
+            alert.setContentText("The game you searched for was not found by the API.");
+            alert.showAndWait();
         }
-        System.out.println(searchText);
     }
 }
