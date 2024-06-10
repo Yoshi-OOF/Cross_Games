@@ -19,6 +19,8 @@ import pojo.ResultGame;
 
 public class APIManager {
 
+	public static String imgUrl;
+
 	public static void setInformations(Game newGame, String searchedText) throws GameNotFoundException {
 		
 		String searchedEncoded = "";
@@ -60,6 +62,8 @@ public class APIManager {
 			}
 			Result firstResult = result.getResults()[0];
 			System.out.println(firstResult.getBackgroundImage());
+
+			imgUrl = firstResult.getBackgroundImage();
 
 			newGame.setName(firstResult.getName());
 			newGame.setImageURL(firstResult.getBackgroundImage());

@@ -50,14 +50,14 @@
                                  </children></Pane>
                               <Pane prefHeight="98.0" prefWidth="101.0">
                                  <children>
-                                    <ImageView fitHeight="99.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="99.0" fitWidth="101.0" onMouseClicked="#searchGameButton" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/loupe.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </Pane>
-                              <TextField onAction="#searchGameTextField" prefHeight="89.0" prefWidth="1081.0" promptText="Recherche..." style="-fx-border-radius: 1000; -fx-border-color: white; -fx-border-width: 5; -fx-background-color: none;">
+                              <TextField fx:id="searchGameTextFieldId" onAction="#searchGameTextField" prefHeight="89.0" prefWidth="1081.0" promptText="Recherche..." style="-fx-border-radius: 1000; -fx-border-color: white; -fx-border-width: 5; -fx-background-color: none;">
                                  <HBox.margin>
                                     <Insets bottom="2.0" top="5.0" />
                                  </HBox.margin>
@@ -259,7 +259,7 @@
                               <Pane fx:id="paneGame2" layoutX="90.0" layoutY="20.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame2" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -300,7 +300,7 @@
                               <Pane fx:id="paneGame3" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame3" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -341,7 +341,7 @@
                               <Pane fx:id="paneGame4" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame4" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -382,7 +382,7 @@
                               <Pane fx:id="paneGame5" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame5" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -423,7 +423,7 @@
                               <Pane fx:id="paneGame6" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame6" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -471,7 +471,7 @@
                               <Pane fx:id="paneGame7" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame7" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -512,7 +512,7 @@
                               <Pane fx:id="paneGame8" layoutX="90.0" layoutY="20.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame8" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -553,7 +553,7 @@
                               <Pane fx:id="paneGame9" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame9" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -594,7 +594,7 @@
                               <Pane fx:id="paneGame10" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame10" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -635,7 +635,7 @@
                               <Pane fx:id="paneGame11" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame11" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -676,7 +676,7 @@
                               <Pane fx:id="paneGame12" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame1111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame12" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -724,7 +724,7 @@
                               <Pane fx:id="paneGame13" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame13" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -765,7 +765,7 @@
                               <Pane fx:id="paneGame14" layoutX="90.0" layoutY="20.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame1111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame14" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -806,7 +806,7 @@
                               <Pane fx:id="paneGame15" layoutX="290.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame15" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -847,7 +847,7 @@
                               <Pane fx:id="paneGame16" layoutX="490.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame16" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -888,7 +888,7 @@
                               <Pane fx:id="paneGame17" layoutX="690.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame1111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame17" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
@@ -929,7 +929,7 @@
                               <Pane fx:id="paneGame18" layoutX="890.0" layoutY="10.0" onMouseClicked="#paneGameClicked" onMouseEntered="#hoverPaneGame" onMouseExited="#noHoverPaneGame" prefHeight="308.0" prefWidth="200.0">
                                  <children>
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" height="304.0" stroke="BLACK" strokeType="INSIDE" width="204.0" x="-2.0" y="-2.0" />
-                                    <ImageView fx:id="imgGame11111111" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imgGame18" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@image/exempleImageJeu.png" />
                                        </image>
