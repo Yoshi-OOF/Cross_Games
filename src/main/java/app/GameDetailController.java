@@ -155,10 +155,6 @@ public class GameDetailController {
         developerLabel.setText(developer);
     }
 
-    public void setGameTitle(String gameTitle) {
-        this.gameTitle.setText(gameTitle);
-    }
-
     public void setGameImage(Image image) {
         imgGame.setImage(image);
     }
