@@ -36,6 +36,8 @@ public class testapi {
             Result firstResult = result.getResults()[0];
             System.out.println(firstResult.getName());
             System.out.println(firstResult.getBackgroundImage());
+            System.out.println(firstResult.getDescription());
+
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();

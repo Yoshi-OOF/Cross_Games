@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Game;
+import model.MyGames;
 
 import java.io.IOException;
 
@@ -29,6 +30,8 @@ public class MainController {
 
     @FXML
     private TextField searchGameTextFieldId;
+
+    private final MyGames allGames = new MyGames(); // Initialize here
 
     @FXML
     private ImageView imgGame1, imgGame2, imgGame3, imgGame4, imgGame5, imgGame6, imgGame7, imgGame8, imgGame9, imgGame10, imgGame11, imgGame12, imgGame13, imgGame14, imgGame15, imgGame16, imgGame17, imgGame18;
@@ -93,7 +96,7 @@ public class MainController {
                 String gameTitle = gameTitles[index].getText();
                 Image gameImage = imageViews[index].getImage();
 
-                String description = "Game description here";
+                String description = allGames.findGameByName(gameTitle).get(0).getDescription();
                 String developer = "Game developer here";
 
                 gameDetailController.setDescriptionText(description);
@@ -158,6 +161,8 @@ public class MainController {
                 System.out.println("No more image views available");
             }
             System.out.println(searchText);
+
+            allGames.addGame(newGame);
         } catch (GameNotFoundException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Game not found");
