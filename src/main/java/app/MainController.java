@@ -44,6 +44,8 @@ public class MainController {
     private Label gameTitle1, gameTitle2, gameTitle3, gameTitle4, gameTitle5, gameTitle6, gameTitle7, gameTitle8, gameTitle9, gameTitle10, gameTitle11, gameTitle12, gameTitle13, gameTitle14, gameTitle15, gameTitle16, gameTitle17, gameTitle18;
 
     private Label[] gameTitles;
+    private Stage gameDetailDialog;
+
     @FXML
     public void initialize() {
         imageViews = new ImageView[] {imgGame1, imgGame2, imgGame3, imgGame4, imgGame5, imgGame6, imgGame7, imgGame8, imgGame9, imgGame10, imgGame11, imgGame12, imgGame13, imgGame14, imgGame15, imgGame16, imgGame17, imgGame18};
@@ -68,20 +70,54 @@ public class MainController {
 
     }
 
+    public void setGameDetailDialog(Stage gameDetailDialog) {
+        this.gameDetailDialog = gameDetailDialog;
+    }
+
     public void paneGameClicked(MouseEvent event){
         Node source = (Node) event.getSource();
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("Game_detail.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage) source.getScene().getWindow();
-            Scene gamescene = new Scene(root);
-            currentStage.setScene(gamescene);
-            currentStage.setTitle(source.getId());
-            currentStage.show();
+            int index = -1;
+            for (int i = 0; i < panesGame.length; i++) {
+                if (panesGame[i] == source) {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index != -1) {
+                FXMLLoader loader = new FXMLLoader(Main.class.getResource("Game_detail.fxml"));
+                Parent root = loader.load();
+                GameDetailController gameDetailController = loader.getController();
+
+                // Get game details
+                String gameTitle = gameTitles[index].getText();
+                Image gameImage = imageViews[index].getImage();
+
+                // Assuming you have more details stored somewhere, you need to retrieve them here
+                // For simplicity, let's assume we have methods getDescription(), getDeveloper(), etc.
+                String description = "Game description here"; // replace with actual method to get description
+                String developer = "Game developer here"; // replace with actual method to get developer
+                // ... add other game details
+
+                // Set game details in GameDetailController
+                gameDetailController.setDescriptionText(description);
+                gameDetailController.setDeveloperLabel(developer);
+                gameDetailController.setGameTitle(gameTitle);
+                gameDetailController.setGameImage(gameImage);
+                // ... set other game details
+
+                Stage currentStage = (Stage) source.getScene().getWindow();
+                Scene gamescene = new Scene(root);
+                currentStage.setScene(gamescene);
+                currentStage.setTitle("Cross Games : Game Detail");
+                currentStage.show();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     public void homeButtonClicked(MouseEvent event){
         Node source = (Node) event.getSource();

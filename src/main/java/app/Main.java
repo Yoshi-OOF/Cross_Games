@@ -27,6 +27,9 @@ public class Main extends Application {
         gameDetailDialog.setScene(sceneGameDetail);
         gameDetailDialog.setTitle("Règles");
 
+        MainController mainController = (MainController)fxmlLoader.getController();
+        mainController.setGameDetailDialog(gameDetailDialog);
+
         GameDetailController gameDetailController = (GameDetailController)fxmlRulesLoader.getController();
         gameDetailController.setMainController((MainController)fxmlLoader.getController());
 
