@@ -57,6 +57,51 @@ public class GameDetailController {
         panesGame = new Pane[] {paneGame1, paneGame2, paneGame3, paneGame4, paneGame5, paneGame6, paneGame7, paneGame8, paneGame9, paneGame10, paneGame11, paneGame12, paneGame13, paneGame14, paneGame15, paneGame16, paneGame17, paneGame18};
     }
 
+    @FXML
+    private Label descriptionText;
+
+    @FXML
+    private Label developerLabel;
+
+    @FXML
+    private Label game1Tag1;
+
+    @FXML
+    private Label game1Tag2;
+
+    @FXML
+    private Label game1Tag3;
+
+    @FXML
+    private Label game1Tag4;
+
+    @FXML
+    private Label game1Tag5;
+
+    @FXML
+    private Label gameTitle;
+
+    @FXML
+    private Label genreText;
+
+    @FXML
+    private ImageView imgGame;
+
+    @FXML
+    private Label pegiLabel;
+
+    @FXML
+    private Label plateformeText;
+
+    @FXML
+    private Label publisherLabel;
+
+    @FXML
+    private Label releaseDateLabel;
+
+    @FXML
+    private ImageView settingsButton;
+
     public void searchGameTextField(){
 
     }
@@ -101,5 +146,14 @@ public class GameDetailController {
 
     public void searchGameButton() {
     }
+
+    public void setDescriptionText(String description) {
+        descriptionText.setText(description);
+    }
+
+    public void setDeveloperLabel(String developer) {
+        developerLabel.setText(developer);
+    }
+
 
 }
