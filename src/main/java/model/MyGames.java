@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,36 +30,44 @@ public class MyGames implements Serializable {
 	}
 
 	public List<Game> filterByTags(List<String> selectedTags) {
-		return allGames.stream()
-				.filter(game -> game.getTags().containsAll(selectedTags))
-				.collect(Collectors.toList());
+		List<Game> filteredGames = new ArrayList<>();
+		for (Game game : allGames) {
+			if (new HashSet<>(game.getTags()).containsAll(selectedTags)) {
+				filteredGames.add(game);
+			}
+		}
+		return filteredGames;
 	}
 
 	public List<Game> sortByName() {
-		return allGames.stream()
-				.sorted(Comparator.comparing(Game::getName))
-				.collect(Collectors.toList());
+		List<Game> sortedGames = new ArrayList<>(allGames);
+		sortedGames.sort(Comparator.comparing(Game::getName));
+		return sortedGames;
 	}
 
 	public List<Game> sortByReleaseDate() {
-		return allGames.stream()
-				.sorted(Comparator.comparing(Game::getReleaseDate))
-				.collect(Collectors.toList());
+		List<Game> sortedGames = new ArrayList<>(allGames);
+		sortedGames.sort(Comparator.comparing(Game::getReleaseDate));
+		return sortedGames;
 	}
 
 	public List<Game> sortByNote() {
-		return allGames.stream()
-				.sorted(Comparator.comparing(Game::getNote).reversed())
-				.collect(Collectors.toList());
+		List<Game> sortedGames = new ArrayList<>(allGames);
+		sortedGames.sort(Comparator.comparing(Game::getNote).reversed());
+		return sortedGames;
 	}
 
 	public List<Game> findGameByName(String name) {
-		return allGames.stream()
-				.filter(game -> game.getName().equalsIgnoreCase(name))
-				.collect(Collectors.toList());
+		List<Game> matchingGames = new ArrayList<>();
+		for (Game game : allGames) {
+			if (game.getName().equalsIgnoreCase(name)) {
+				matchingGames.add(game);
+			}
+		}
+		return matchingGames;
 	}
 
-	public void affichageParTag(List<String> selectedTags) {
+	public void showByTag(List<String> selectedTags) {
 		List<Game> filteredGames = filterByTags(selectedTags);
 		filteredGames.forEach(game -> {
 			System.out.println(game);
