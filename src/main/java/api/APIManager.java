@@ -70,6 +70,8 @@ public class APIManager {
 
 			newGame.setName(firstResult.getName());
 			newGame.setImageURL(firstResult.getBackgroundImage());
+			newGame.setDescription(firstResult.getDescription());
+
 
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();

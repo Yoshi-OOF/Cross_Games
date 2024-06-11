@@ -11,9 +11,13 @@ public class Result {
     private String backgroundImage;
     @JsonProperty("released")
     private String released;
+    @JsonProperty("description")
+    private String description;
+
 
     public String getReleased() { return released; }
     public String getName() { return name; }
     public String getBackgroundImage() { return backgroundImage; }
+    public String getDescription() { return description; }
     
 }

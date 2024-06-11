@@ -90,22 +90,15 @@ public class MainController {
                 Parent root = loader.load();
                 GameDetailController gameDetailController = loader.getController();
 
-                // Get game details
                 String gameTitle = gameTitles[index].getText();
                 Image gameImage = imageViews[index].getImage();
 
-                // Assuming you have more details stored somewhere, you need to retrieve them here
-                // For simplicity, let's assume we have methods getDescription(), getDeveloper(), etc.
-                String description = "Game description here"; // replace with actual method to get description
-                String developer = "Game developer here"; // replace with actual method to get developer
-                // ... add other game details
+                String description = "Game description here";
+                String developer = "Game developer here";
 
-                // Set game details in GameDetailController
                 gameDetailController.setDescriptionText(description);
                 gameDetailController.setDeveloperLabel(developer);
-                gameDetailController.setGameTitle(gameTitle);
                 gameDetailController.setGameImage(gameImage);
-                // ... set other game details
 
                 Stage currentStage = (Stage) source.getScene().getWindow();
                 Scene gamescene = new Scene(root);
